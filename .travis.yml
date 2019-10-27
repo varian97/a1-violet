@@ -6,4 +6,3 @@ install:
   - 'pipenv install --dev'
 script:
   - 'pipenv run python manage.py test -v 2'
-  - 'pipenv run flake8'
