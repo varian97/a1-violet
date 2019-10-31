@@ -1,3 +1,5 @@
+from autoslug import AutoSlugField
+
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -5,6 +7,7 @@ from django.contrib.auth.models import User
 class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=150)
+    slug = AutoSlugField(populate_from="title", blank=True)
     content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
