@@ -19,5 +19,7 @@ import apps.post.urls as post_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(post_urls))
+
+    # post API
+    path('api/posts/', include(post_urls)),
 ]
