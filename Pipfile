@@ -4,13 +4,16 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pep8 = "*"
-django = "*"
-djangorestframework = "*"
-flake8 = "*"
-django-autoslug = "*"
+pep8 = "==1.7.1"
+flake8 = "==3.7.9"
 
 [packages]
+django = "==2.2.7"
+djangorestframework = "==3.10.3"
+django-autoslug = "==1.9.6"
+gunicorn = "==20.0.0"
+newrelic = "==5.2.3.131"
+django-heroku = "*"
 
 [requires]
 python_version = "3.6"

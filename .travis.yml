@@ -1,8 +1,12 @@
 language: python
 python:
-  - 3.6.5
+- 3.6.5
 install:
-  - 'pip install pipenv'
-  - 'pipenv install --dev'
+- pip install pipenv
+- pipenv install --dev
 script:
-  - 'pipenv run python manage.py test -v 2'
+- pipenv run python manage.py test -v 2
+deploy:
+  provider: heroku
+  api_key:
+    secure: MQmpOA8JJAG1HI/MabJHx714pCDWvYndAhu96VA7UzYnNiD/1Mt7uAyCqoKdwYMRY0VikNUrZmF+CEa+ZirLL+XFKdSqwpfGNPOl7FOMXqgd3nZM78pyw7DNVcOyM9WWXEATxVqN7LlFX26Wdg5RwtNtUPngwWw2Y1ZfTQVbh0/hIqDaWaP4SP/eTyQQ7hWnCmnu1Q8Lu+CFcUTtgCjFsoX/baH81Qjub+8BLtLNBmh0P35h9ktYSctNgNn/7O/qNDA3XZuyKW2DH+dRUEzXxdq7WKjkQUqyzxd2t+mSXYmzhcTACF9sdc9ShiaPuxlnc+v4cI/0h0gdZ/n6jlGUyv2uEMFHCEZahCWth0KUxKgtH8nxUuHK2po1ffHoktAuk0xRGtBpRYCRO7jyZH2Bj5jHgII1Ts3ezUPPz9WKzcWN1NY4KqnCFkiS/0TkZT/yiMCqjs4mKHClLZeFG4t86FLQt0yWg1V81HpI7a/lhSleBbQe1an4MsaTcDZtIFZ2gYEEULrr6XsO++hAyKDZEn86rv1tgR7j8zfqpD7Snv6Ttsi6OjqxUX7doi7HvSXd0Yt6fFifGHiUdnCFqWclkdt+62/4i/vVFR/kMdlyCDcdFvjVc+VpUHuEeV0Hjg09UhMKq0viu6fY+ASglEHXOd98CQ8CAUGQEXhys77ld48=
